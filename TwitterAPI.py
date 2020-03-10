@@ -3,10 +3,13 @@ from pymongo import MongoClient
 import tweepy
 
 #authentication keys
-CONSUMER_KEY="0FMVtFqsDVkZWZlrtSY6bzqQx"
-CONSUMER_SECRET="OhYZ4wtSZTAvVNdhPGsW2A9wgKTFI9lVqhyJH6Ea7uKv3povUm"
-OAUTH_TOKEN="1235355681496199169-AIzv98q9W8RLvlSLIoZpRteioRjeto"
-OAUTH_TOKEN_SECRET="fnfKKlSSZttlMHf55dDqjunW9PohN4dSIgAEZPgfJaojSQ"
+
+f = open("twitter_api.rtf", "r")
+r = f.readlines()
+CONSUMER_KEY=r[0]
+CONSUMER_SECRET=r[1]
+OAUTH_TOKEN=r[2]
+OAUTH_TOKEN_SECRET=r[3]
 
 # Creating the authentication object
 auth = tweepy.OAuthHandler(CONSUMER_KEY, CONSUMER_SECRET)
