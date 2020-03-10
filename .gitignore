@@ -1,0 +1,7 @@
+# ignore twitter api key file
+twitter_api.rtf
+
+#ignore json
+*.json
+
+
